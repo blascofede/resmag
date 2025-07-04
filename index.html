@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RES-MAG</title> <!-- Título del juego cambiado a RES-MAG -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlace a Font Awesome para iconos si es necesario -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Título del juego como imagen -->
+        <img id="game-title" src="assets/titulo.png" alt="RES-MAG"> <!-- Alt text actualizado -->
+
+        <div class="game-info">
+            <p>Nivel: <span id="level-display">1</span></p>
+            <p>Rebotes: <span id="bounce-display">0</span> / <span id="required-bounces-display">1</span></p>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="game-messages">
+            <p id="game-status-message"></p>
+        </div>
+        <div class="controls">
+            <button id="restart-button" class="game-button">Reiniciar Nivel</button>
+            <button id="next-level-button" class="game-button" style="display: none;">Siguiente Nivel</button>
+        </div>
+
+        <!-- Nueva pantalla de fin de juego -->
+        <div id="endGameScreen" class="end-game-screen" style="display: none;">
+            <p class="end-game-message success"></p>
+            <p class="prize-message"></p>
+            <label for="bar-date" class="date-label">Elige la fecha para la salida al bar:</label>
+            <input type="date" id="bar-date" class="date-picker">
+            <button id="restart-game-button" class="game-button" style="margin-top: 20px;">Volver a Jugar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
